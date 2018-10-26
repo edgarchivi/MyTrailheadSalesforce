@@ -1,0 +1,31 @@
+<aura:component controller="CampingListController">
+    <aura:attribute name="items" type="Camping_Item__c[]" />
+    <!-- <aura:attribute name="newItem" type="Camping_Item__c" default="{'sobjectType':'Camping_Item__c',
+                                                                   'Quantity__c':0,
+                                                                   'Price__c':0,
+                                                                   'Packed__c':false,
+                                                                   'Name': ''
+                                                                   }"/> -->
+
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <aura:handler name="addItem" event="c:addItemEvent" action="{!c.handleAddItem}" />
+
+    <!-- EVENT -->
+    <!-- <aura:registerEvent name="updateChildComponents" type="c:CustomerDashboardAutoTrackerCallbackEvent"/> -->
+
+
+    <!-- FORM -->
+    <c:campingListForm />
+
+    <!-- / ITERATE LIST -->
+    <lightning:card title="Camping">
+        <p class="slds-p-horizontal--small">
+            <aura:iteration items="{!v.items}" var="item">
+                <c:campingListItem item="{!item}" />
+            </aura:iteration>
+        </p>
+    </lightning:card>
+
+
+
+</aura:component>
