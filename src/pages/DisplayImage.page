@@ -1,0 +1,14 @@
+<apex:page showHeader="false" sidebar="true" >
+    <apex:image id="developersImage" value="https://developer.salesforce.com/files/salesforce-developer-network-logo.png" width="220" height="55" alt="Developers"/>
+
+    <apex:pageBlock title="A Block Title">
+        <apex:pageBlockSection title="A Section Title">
+            I'm three components deep!
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+</apex:page>
+
+<!-- 1)  The page must be named DisplayImage
+It must NOT display the standard Salesforce header
+It must use a Visualforce apex:image component to display this image - https://developer.salesforce.com/files/salesforce-developer-network-logo.png -->
