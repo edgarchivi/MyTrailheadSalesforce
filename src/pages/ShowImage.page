@@ -1,0 +1,12 @@
+<apex:page showHeader="true" sidebar="true">
+    <apex:pageBlock>
+        <apex:pageBlockSection title="Show Image">
+
+            <apex:image id="imageFromZip"
+                value="{!URLFOR($Resource.vfimagetest, 'cats/kitten1.jpg')}"
+                alt="Image is comming from Zipped Resource">
+            </apex:image>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+	
+</apex:page>
