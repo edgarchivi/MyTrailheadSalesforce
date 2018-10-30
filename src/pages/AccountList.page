@@ -1,0 +1,26 @@
+<apex:page showHeader="true" sidebar="true" standardController="Account" recordSetVar="accounts">
+    <apex:pageBlock title = "Accounts">
+        <ol>
+            <apex:repeat value="{!accounts}" var="a">
+                <li>
+                <!-- <apex:outputLink value="ContactView?Id=&{! a.Id}" id="theLink">www.salesforce.com</apex:outputLink> -->
+                <apex:outputLink value="/{!a.id}">
+                    {!a.name}
+                </apex:outputLink>
+                <!-- {!a.Name} -->
+                </li>
+            </apex:repeat>
+        </ol>
+    </apex:pageBlock>
+
+</apex:page>
+<!-- 
+
+  <apex:repeat var="cases" value="{!Account.Cases}">
+        <tr>
+            <td>{!cases.CaseNumber}</td>
+            <td>{!cases.Origin}</td>
+            <td>{!cases.Contact.email}</td>
+            <td>{!cases.Status}</td>
+        </tr>
+</apex:repeat> -->
